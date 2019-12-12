@@ -3,7 +3,7 @@ import os
 import sys
 l = len(sys.argv)
 if l == 1:
-    print("{:d} argument.".format(l-1))
+    print("{:d} arguments.".format(l-1))
 if l == 2:
     print("{:d} argument:".format(l-1))
 elif l > 2:
