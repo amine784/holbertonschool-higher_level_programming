@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-def print_list_integer(my_list=[]):
+def element_at(my_list, idx):
     for i in range(len(my_list)):
-        print("{:d}".format(my_list[i]))
+        if idx > i or mylist[i] < 0:
+            return
+        return(mylist[idx])
