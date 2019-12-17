@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    x = tuple_a + ('0','0')
-    y = tuple_b + ('0','0')
+    x = tuple_a + ('0', '0')
+    y = tuple_b + ('0', '0')
     a = int(x[0])
     b = int(y[0])
     s = a + b
