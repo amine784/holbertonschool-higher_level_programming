@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+def update_dictionary(a_dictionary, key, value):
+    if key not in a_dictionary:
+        value.update(a_dectionary)
+    else:
+        value.update(a_dectionary)
+    return(a_dictionary)
+    
