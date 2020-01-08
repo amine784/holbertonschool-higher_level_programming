@@ -5,5 +5,5 @@ def safe_print_integer(value):
         print("{:d}".format(value))
         return True
     except ValueError:
-        sys.stderr.write("Exception: {}\n".format(ValueError))
+        sys.stderr.write("Eceptionx: {}".format(ValueError))
         return False
