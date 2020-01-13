@@ -1,24 +1,36 @@
+#!/usr/bin/python3
+'''
+function that devide
+matrix per an int
+equal
+'''
+
+
 def matrix_divided(matrix, div):
+    '''
+    metho that devide matrix per int or float
+    '''
     messageError = "matrix must be a matrix (list of lists) of integers/floats"
     messageErrorB = "Each row of the matrix must have the same size"
     messageErrorC = "div must be a number"
     liste = []
-    l = len(matrix[0])
     if type(matrix) is not list:
         raise TypeError(messageError)
     for i in matrix:
         if type(i) is not list:
             raise TypeError(messageError)
-        if l != len(i):
+        if len(matrix[0]) != len(i):
             raise TypeError(messageErrorB)
+
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
+
     for i in matrix:
         for j in i:
-            if not isinstance(j, (float, int)):
+            if type(j) is not int and type(j) is not float:
                 raise TypeError(messageError)
-    if div is None:
-        raise ZeroDivisionError("division by zero")
     for m in matrix:
-        if not isinstance(div, (int, float)):
+        if type(div) is not int and type(div) is not float:
             raise TypeError(messageErrorC)
         else:
             for k in m:
