@@ -15,8 +15,8 @@ TypeError: last_name must be a string
 My name is Bob 
 
 
->>> say_my_name("John", "Walter")
-My name is John Walter
+>>> say_my_name("John", "Wali")
+My name is John Wali
 
 
 
@@ -32,5 +32,5 @@ Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
->>> say_my_name("Walter", "White")
-My name is Walter White
+>>> say_my_name("amine", "Why")
+My name is amine Why
