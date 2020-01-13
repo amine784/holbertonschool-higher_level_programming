@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+'''
+function that
+add 2 int
+deff
+'''
+
+
 def add_integer(a, b=98):
     '''
     function that add 2 integer
