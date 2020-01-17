@@ -11,8 +11,8 @@ class Rectangle:
     def method
     '''
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -54,15 +54,15 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return(space)
         else:
-            line = self.height - 1
+            line = self.__height - 1
             for i in (0, line):
                 for j in range(0, line):
-                    x = '#' * self.width
+                    x = '#' * self.__width
                     print(x)
                 return (x)
 
     def __repr__(self):
-        return("Rectangle({:d}, {:d})".format(self.width, self.height))
+        return("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
     def __del__(self):
         print("Bye rectangle...")
