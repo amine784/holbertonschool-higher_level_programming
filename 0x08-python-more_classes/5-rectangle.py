@@ -54,7 +54,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return(space)
         else:
-            line = self.height
+            line = self.height - 1
             for i in (0, line):
                 for j in range(0, line):
                     x = '#' * self.width
