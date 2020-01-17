@@ -14,8 +14,8 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -68,7 +68,7 @@ class Rectangle:
                 return (sym * self.__width)
 
     def __repr__(self):
-        return("Rectangle({:d}, {:d})".format(self.width, self.height))
+        return("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
     def __del__(self):
         print("Bye rectangle...")
