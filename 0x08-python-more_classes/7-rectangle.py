@@ -1,0 +1,75 @@
+#!/usr/bin/python3
+'''
+function to set rectngle
+widh
+height
+'''
+
+
+class Rectangle:
+    '''
+    def method
+    '''
+    number_of_instances = 0
+    print_symbol = "#"
+
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
+        Rectangle.number_of_instances += 1
+
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = value
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__height = value
+
+    def area(self):
+        return(self.__height * self.__width)
+
+    def perimeter(self):
+        if self.__height == 0 or self.__width == 0:
+            return(0)
+        else:
+            return((self.__height * 2) + (self.__width * 2))
+
+    def __str__(self):
+        space = ""
+        sym = str(self.print_symbol)
+        line = self.__height
+        if self.__width == 0:
+            return(space)
+        if self.__height == 0:
+            return(space)
+        else:
+            for h in range(line):
+                for w in range(line - 1):
+                    print(sym * self.__width)
+                return (sym * self.__width)
+
+    def __repr__(self):
+        return("Rectangle({:d}, {:d})".format(self.width, self.height))
+
+    def __del__(self):
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
