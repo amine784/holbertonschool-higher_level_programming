@@ -30,9 +30,11 @@ def matrix_divided(matrix, div):
             if type(j) is not int and type(j) is not float:
                 raise TypeError(messageError)
     for m in matrix:
+        new_liste = []
         if type(div) is not int and type(div) is not float:
             raise TypeError(messageErrorC)
         else:
             for k in m:
-                liste.append([round((k / div), 2)])
+                new_liste.append(round((k / div), 2))
+            liste.append(new_liste)
     return(liste)
