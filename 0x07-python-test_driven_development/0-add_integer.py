@@ -21,7 +21,7 @@ def add_integer(a, b=98):
     x = a + b
     if x < 0:
         x = x * -1
-    if x == float("inf"):
+    if x >= float("inf"):
         raise ValueError("overflow")
     else:
         return(int(a) + int(b))
