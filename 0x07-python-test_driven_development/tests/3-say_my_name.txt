@@ -34,3 +34,13 @@ TypeError: first_name must be a string
 
 >>> say_my_name("amine", "Why")
 My name is amine Why
+
+>>> say_my_name("", "")
+Traceback (most recent call last):
+	  ...
+TypeError: first_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+	  ...
+TypeError: first_name must be a string
