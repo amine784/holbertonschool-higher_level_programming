@@ -27,3 +27,7 @@ TypeError: b must be an integer
 -16
 >>> add_integer(1,-8.4)
 -7
+>>> add_integer(2, 1.7976931348623157e+309)
+Traceback (most recent call last):
+    ...
+ValueError: overflow
