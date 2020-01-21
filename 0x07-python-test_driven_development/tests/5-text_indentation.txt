@@ -32,3 +32,5 @@ TypeError: text must be a string
 ?
 <BLANKLINE>
 amineb
+
+>>> text_indentation("")
