@@ -27,3 +27,13 @@ TypeError: 'float' object is not iterable
 Traceback (most recent call last):
 ...
 TypeError: 'NoneType' object is not iterable
+>>> my_list = MyList([1, 4, 8, 0, 15])
+>>> my_list.print_sorted()
+[0, 1, 4, 8, 15]
+
+>>> my_list = MyList([-3, 2])
+>>> my_list.print_sorted()
+[-3, 2]
+>>> my_list = MyList(["DD", "AA"])
+>>> my_list.print_sorted()
+['AA', 'DD']
