@@ -12,6 +12,6 @@ liste = []
 if not os.path.exists("./add_item.json"):
     sv_json(liste, "add_item.json")
 liste = ld_json("add_item.json")
-for i in sys.argv[0:-1]:
+for i in sys.argv[1:]:
     liste.append(i)
     sv_json(liste, "add_item.json")
