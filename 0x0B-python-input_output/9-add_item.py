@@ -11,8 +11,6 @@ ld_json = __import__('8-load_from_json_file').load_from_json_file
 liste = []
 if not os.path.exists("./add_item.json"):
     sv_json(liste, "add_item.json")
-else:
-    continue
 liste = ld_json("add_item.json")
 for i in sys.argv[0:-1]:
     liste.append(i)
