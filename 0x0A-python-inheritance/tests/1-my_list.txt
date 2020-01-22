@@ -37,3 +37,7 @@ TypeError: 'NoneType' object is not iterable
 >>> my_list = MyList(["DD", "AA"])
 >>> my_list.print_sorted()
 ['AA', 'DD']
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
