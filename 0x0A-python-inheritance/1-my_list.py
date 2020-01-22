@@ -7,5 +7,8 @@ return list of all object attribute
 class MyList(list):
     '''def lookyp'''
     def print_sorted(self):
+        s = []
         '''def sorted list'''
-        print(sorted(self))
+        s = self.copy()
+        s.sort()
+        print(s)
