@@ -77,7 +77,7 @@ class Rectangle(Base):
                format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
-        '''func to update'''
+        '''update att and key'''
         if(args is not None) and (len(args) > 0):
             for i in range(0, len(args)):
                 for arg in args:
