@@ -85,7 +85,7 @@ class Rectangle(Base):
                         self.id = arg
                     elif j == 1:
                         self.width = arg
-                    elif arg == 2:
+                    elif j == 2:
                         self.height = arg
                     elif j == 3:
                         self.x = arg
