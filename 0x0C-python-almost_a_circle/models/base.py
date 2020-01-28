@@ -44,12 +44,12 @@ class Base:
         else:
             return(json.loads(json_string))
 
-    @staticmethod
+    @classmethod
     def create(cls, **dictionary):
         '''class create'''
-        if cls.__name__ is "Square":
+        if cls.__name__ == "Square":
             new = cls(1)
-        elif cls.__name__ is "Rectangle":
+        elif cls.__name__ == "Rectangle":
             new = cls(1, 1)
         new.update(**dictionary)
         return(new)
