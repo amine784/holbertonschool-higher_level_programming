@@ -78,3 +78,12 @@ class Rectangle(Base):
         '''str rep'''
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def display(self):
+        '''array'''
+        rect = ""
+        for i in range(self.y):
+            print("")
+        for j in range(self.height):
+            rect = ' ' * self.x + '#' * self.width
+            print(rect)
