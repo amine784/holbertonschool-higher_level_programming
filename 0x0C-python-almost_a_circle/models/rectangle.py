@@ -73,3 +73,17 @@ class Rectangle(Base):
     def area(self):
         '''how to get the area surf'''
         return(self.__width * self.__height)
+
+    def display(self):
+        '''disp'''
+        rect = ""
+        for i in range(self.y):
+            print("")
+        for j in range(self.height):
+            rect = ' ' * self.x + '#' * self.width
+            print(rect)
+
+    def __str__(self):
+        ''' strrep'''
+        return("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".
+               format(self.id, self.x, self.y, self.width, self.height))
