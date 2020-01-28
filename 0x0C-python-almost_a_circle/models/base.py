@@ -29,7 +29,27 @@ class Base:
         '''save to file'''
         if list_objs:
             liste = []
-            liste.append([cls.to_dictionary(arg)for arg in list_objs])
+            for arg in list_objs:
+                liste.append(cls.to_dictionary(arg))
         with open(cls.__name__ + ".json",
                   "w", encoding='utf-8') as File:
-            File.write(cls.to_json_string(liste))
+            x = cls.to_json_string(liste)
+            File.write(x)
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''json to list'''
+        if json_string is None or len(json_string) == 0:
+            return([])
+        else:
+            return(json.loads(json_string))
+
+    @staticmethod
+    def create(cls, **dictionary):
+        '''class create'''
+        if cls.__name__ is "Square":
+            new = cls(1)
+        elif cls.__name__ is "Rectangle":
+            new = cls(1, 1)
+        new.update(**dictionary)
+        return(new)
