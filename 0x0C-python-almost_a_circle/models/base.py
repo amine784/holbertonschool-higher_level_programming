@@ -3,6 +3,7 @@
 create base class
 '''
 import json
+import turtle
 
 
 class Base:
@@ -53,3 +54,23 @@ class Base:
             new = cls(1, 1)
         new.update(**dictionary)
         return(new)
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        '''draws turtle'''
+        for i in list_rectangles:
+            rectngle = turtle.Turtle()
+            rectngle.setpos(i.x, i.y)
+            rectngle.pendown()
+            rectngle.forward(i.width)
+            rectngle.left(90)
+            rectngle.forward(i.height)
+            rectngle.left(90)
+        for i in list_squares:
+            sq = turtle.Turtle()
+            sq.setpos(i.x, i.y)
+            sq.pendown()
+            t.begin_fill()
+            for i in range(4):
+                rectngle.forward(i.size)
+                rectngle.left(90)
