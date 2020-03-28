@@ -9,8 +9,8 @@ if __name__ == "__main__":
                            user=sys.argv[1],
                            passwd=sys.argv[2],
                            db=sys.argv[3])
-    query = "SELECT * FROM states WHERE name LIKE  '{}'".format(sys.argv[4],
-                                                                sys.argv[3])
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(
+        sys.argv[4])
     cur = data.cursor()
     cur.execute(query)
     query_rows = cur.fetchall()
