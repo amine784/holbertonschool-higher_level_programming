@@ -9,7 +9,7 @@ if __name__ == "__main__":
                            user=sys.argv[1],
                            passwd=sys.argv[2],
                            db=sys.argv[3])
-    query = "SELECT * FROM states WHERE name LIKE 'N%'"
+    query = "SELECT * FROM states WHERE name LIKE  BINARY 'N%'"
     cur = data.cursor()
     cur.execute(query)
     query_rows = cur.fetchall()
