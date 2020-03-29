@@ -19,4 +19,3 @@ if __name__ == "__main__":
     inst = session.query(State).filter(State.id == id).first()
     inst.name = "New Mexico"
     session.commit()
-    session.close()
