@@ -15,7 +15,7 @@ if __name__ == "__main__":
         user, passwd, db), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    new_instnce = State(name="Louisiane")
+    new_instnce = State(name="Louisiana")
     session.add(new_instnce)
     session.commit()
     print(new_instnce.id)
