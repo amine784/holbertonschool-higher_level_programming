@@ -12,3 +12,9 @@ if __name__ == "__main__":
     db = sys.argv[3]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         user, passwd, db))
+    Base.metadata.create_all(engine)
+    session = Session(engine)
+    p = State(name="California")
+    session.add(p.cities.append(City(name="san Francisco")))
+    session.commit()
+    session.close()
