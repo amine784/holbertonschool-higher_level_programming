@@ -4,9 +4,8 @@ if __name__ == "__main__":
     import sqlalchemy
     from sqlalchemy.orm import Session
     import sys
-    from model_state import Base, State
     from sqlalchemy import create_engine
-    from relationship_city import City
+    from relationship_state import City, State, Base
     user = sys.argv[1]
     passwd = sys.argv[2]
     db = sys.argv[3]
