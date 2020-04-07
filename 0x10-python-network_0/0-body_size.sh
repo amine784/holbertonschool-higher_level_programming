@@ -1,0 +1,3 @@
+#!/bin/bash
+# command
+curl -s $1 | wc -c
