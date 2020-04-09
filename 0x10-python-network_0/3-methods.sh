@@ -1,3 +1,3 @@
 #!/bin/bash
 # script bash to display method
-curl -s "$1" | grep Allow | cut -d " " -f2-
+curl -I -s "$1" | grep Allow | cut -d " " -f2-
