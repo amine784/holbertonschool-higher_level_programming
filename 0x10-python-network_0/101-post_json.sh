@@ -1,4 +1,3 @@
 #!/bin/bash
-#Bash script that sends a JSON POST request to a URL passed as
-#the first argument, and displays the body of the response.
-curl -H "content-Type: application/json" $1 @$2
+# Bash script that sends a JSON POST request to a URL passed
+curl -H "content-Type: application/json" -s "$1" @"$2"
