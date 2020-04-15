@@ -7,5 +7,5 @@ if __name__ == "__main__":
         try:
             with request.urlopen(sys.argv[1]) as req:
                     print(req.read().decode("utf-8"))
-        except error.HTTPError as req:
-            print("Error code: {}"format(req.code))
+        except error.HTTPError as error:
+            print("Error code: {}"format(error.code))
