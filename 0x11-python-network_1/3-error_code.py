@@ -2,10 +2,11 @@
 '''ends a request to the URL and displays the value of the X-Request-Id
 '''
 import urllib.request
+from urllib import error
 import sys
 if __name__ == "__main__":
         try:
-            with request.urlopen(sys.argv[1]) as req:
+            with urllib.request.urlopen(sys.argv[1]) as req:
                     print(req.read().decode("utf-8"))
         except error.HTTPError as error:
-            print("Error code: {}"format(error.code))
+            print("Error code: {}".format(error.code))
