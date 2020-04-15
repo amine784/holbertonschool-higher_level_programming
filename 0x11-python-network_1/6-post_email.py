@@ -4,4 +4,4 @@
 from sys import argv
 import requests
 if __name__ == "__main__":
-    print("{}".format((requests.post(argv[1], email={'email': argv[2]}).text)))
+    print("{}".format((requests.post(argv[1], data={'email': argv[2]})).text))
