@@ -1,7 +1,10 @@
 #!/usr/bin/node
-if (process.argv.length <= 3) {
-  console.log(0);
+const nbre = process.argv.length;
+const n = parseInt(nbre, 10);
+const l = process.argv.sort();
+const max = l[l.length - 2];
+if (n <= 3) {
+  console.log('0');
 } else {
-  const list = process.argv.sort();
-  console.log(list.reverse()[1]);
+  console.log(max);
 }
