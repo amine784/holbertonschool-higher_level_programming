@@ -1,5 +1,6 @@
 #!/usr/bin/node
-require('request')(process.argv[2], function (err, res, body) { if (err) { console.log(err); }
+require('request')(process.argv[2], function (err, res, body) {
+  if (err) { console.log(err); }
   let m = 0;
   let c, h;
   const data = JSON.parse(body).results;
